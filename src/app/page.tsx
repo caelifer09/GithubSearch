@@ -8,6 +8,7 @@ const Home = () => {
   const [usuario, setUsuario] = useState<User | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+
   const getUser = async (username: string) => {
     const res = await fetch(`https://api.github.com/users/${username}`);
     if (res.status != 200) {
@@ -22,7 +23,7 @@ const Home = () => {
   
   return (
     <>
-      <FormSearch getUser={getUser} />      
+      <FormSearch getUser={getUser} />   
       { usuario && <UserCardInfo usuario={usuario} /> }
       {error && (
         <div className="rounded-lg bg-red-500 p-4 text-white">{error}</div>

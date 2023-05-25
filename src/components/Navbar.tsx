@@ -27,7 +27,7 @@ const Navbar = () => {
     } else {
       document.documentElement.classList.remove("dark");
     }
-    localStorage.setItem("theme", theme)
+    localStorage.setItem("theme", theme);
   },[theme]);
 
   if (!hasMounted) {
@@ -39,7 +39,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className='text-white flex items-center mb-10 space-x-2'>
+    <header className='text-white flex items-center mb-8 space-x-2 mt-2'>
       <h1 className='text-4xl font-semibold flex-grow text-blue-950 dark:text-white'>
         devfinder
       </h1>
