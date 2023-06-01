@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from "next/image";
-import LogoIcon from '@/components/icons/LogoIcon'
 import LocationIcon from '@/components/icons/LocationIcon'
 import TwitterIcon from '@/components/icons/TwitterIcon'
 import ChainIcon from '@/components/icons/ChainIcon'

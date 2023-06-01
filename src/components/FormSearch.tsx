@@ -1,4 +1,3 @@
-
 import React from 'react'
 import SearchIcon from '@/components/icons/SearchIcon';
 
@@ -7,16 +6,18 @@ interface Props {
 };
 
 const FormSearch = (props: Props): JSX.Element => {
-  const {getUser} = props
+  const { getUser } = props
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const username = e.currentTarget.username.value;
-    if (!username) return;
+    const username = e.currentTarget?.username?.value;
     getUser(username);
   };
 
   return (
-    <form onSubmit={handleSubmit} className='flex flex-wrap bg-white p-4 rounded-xl items-center mb-6 space-x-2 shadow-md dark:bg-blue-900 dark:shadow-none'>
+    <form 
+    data-testid="search-form"
+    onSubmit={handleSubmit} className='flex flex-wrap bg-white p-4 rounded-xl items-center mb-6 space-x-2 shadow-md dark:bg-blue-900 dark:shadow-none'>
           <span className='px-3'>
             <SearchIcon width={30} className='fill-sky-500'/>
           </span>
